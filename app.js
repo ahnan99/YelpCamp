@@ -21,8 +21,9 @@ app.use(methodOverride("_method"));
 
 //seedDB();
 
-mongoose.connect("mongodb://localhost/yelp_camp");
-
+//mongoose.connect("mongodb://localhost/yelp_camp");
+//mongodb://<dbuser>:<dbpassword>@ds259768.mlab.com:59768/yelp_camp
+mongoose.connect("mongodb://test:test123@ds259768.mlab.com:59768/yelp_camp");
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.set("view engine","ejs");
