@@ -2,19 +2,27 @@
 
 
 
-
-
-
-
-
 <div class="container">
 	<header class="jumbotron">
 		<div class="container"><h1>Welcome to YelpCamp</h1>
 			<p>View our hand-picked campgrounds from all over the worlds.</p>
 			<p><a class="btn btn-lg btn-primary" href="/campgrounds/new">Add a new Campground !</a></p>
+			<p>
+				<form action="/campgrounds" method="GET" class="form-inline">
+					<div class="form-group">
+						<input type="text" name="search" placeholder="Campground search..." class="form-control">
+						<input type="submit" value="Search" class="btn btn-default">
+					</div>
+				</form>
+			</p>
 		</div>
 	</header>
 	<div class="row text-center" style="display: flex; flex-wrap: wrap;">
+			<%if(noMatch){%>
+				<div class="col-md-12">
+						<h3><%= noMatch %></h3>
+				</div>
+			<%}%>
 			<% campgrounds.forEach(function(cg){ %>
 			
 			<div class="col-md-3 col-sm-6">

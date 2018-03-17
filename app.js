@@ -23,7 +23,10 @@ app.use(methodOverride("_method"));
 
 //mongoose.connect("mongodb://localhost/yelp_camp");
 //mongodb://test:test123@ds259768.mlab.com:59768/yelp_camp
+
 mongoose.connect(process.env.DATABASEURL);
+
+
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.set("view engine","ejs");
@@ -65,3 +68,8 @@ app.use("/campgrounds", campgroundRoutes);
 app.listen(process.env.PORT,process.env.IP, function(){
 	console.log("Server Started!!");
 })
+
+
+// app.listen(3000, function(){
+// 	console.log("Server Started!!");
+// })
