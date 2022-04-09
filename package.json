@@ -18,7 +18,7 @@
     "express-session": "^1.15.6",
     "locus": "^2.0.1",
     "method-override": "^2.3.10",
-    "moment": "^2.21.0",
+    "moment": "^2.29.2",
     "mongoose": "^5.0.7",
     "node-geocoder": "^3.22.0",
     "nodemailer": "^4.6.3",
